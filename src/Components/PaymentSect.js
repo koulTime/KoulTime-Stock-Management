@@ -1,6 +1,5 @@
 import React from "react";
-import { FaTrashAlt } from "react-icons/fa";
-
+import { IoIosAddCircle } from "react-icons/io";
 
 
 function PaymentSect() {
@@ -10,8 +9,8 @@ function PaymentSect() {
       <div className="payment">
         <div className="name">
           <h4>Item</h4>
-          <p>Qty</p>
-          <p>Price</p>
+          <p>Quantity</p>
+          <p></p><p></p>
         </div>
 
         <div className="price">
@@ -20,33 +19,24 @@ function PaymentSect() {
           <article>
             <div className="pay">
               <div>
-                <b>Desert 2</b>
+                <b>Bread</b>
                 <p>$1.50</p>
               </div>
               <p className="qty-box">1</p>
-              <p>$1.50</p>
+              <span className="trash-box" title="add"><IoIosAddCircle /></span>
             </div>
 
-            <div className="pay">
-              <input className="order-input" placeholder="Input Order Note" ></input>
-              <span className="trash-box" title="delete"><FaTrashAlt /></span>
-            </div>
           </article>
 
 
           <article>
             <div className="pay">
               <div>
-                <b>African 3</b>
+                <b>Steak</b>
                 <p>$2.78</p>
               </div>
               <p className="qty-box">2</p>
-              <p>$8.34</p>
-            </div>
-
-            <div className="pay">
-              <input className="order-input" placeholder="Input Order Note" ></input>
-              <span className="trash-box" title="delete"><FaTrashAlt /></span>
+              <span className="trash-box" title="add"><IoIosAddCircle /></span>
             </div>
           </article>
 
@@ -55,21 +45,17 @@ function PaymentSect() {
           <article>
             <div className="pay">
               <div>
-                <b>Chinese 2</b>
+                <b>Pasta</b>
                 <p>$2.50</p>
               </div>
               <p className="qty-box">2</p>
-              <p>$5.00</p>
+              <span className="trash-box" title="add"><IoIosAddCircle /></span>
             </div>
 
-            <div className="pay">
-              <input className="order-input" placeholder="Input Order Note" ></input>
-              <span className="trash-box" title="delete"><FaTrashAlt /></span>
-            </div>
           </article>
 
 
-          <figure>
+          {/*<figure>
             <div className="last">
               <p className="space">Discount</p>
               <p>Total</p>
@@ -78,7 +64,7 @@ function PaymentSect() {
               <p className="space">$0</p>
               <p>$14.84</p>
             </div>
-          </figure>
+          </figure>*/}
 
 
 
