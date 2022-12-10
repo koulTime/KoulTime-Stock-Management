@@ -8,8 +8,6 @@ import ital from "../img/ital.jpg";
 import PaymentSect from "./PaymentSect";
 import { Link } from "react-router-dom";
 
-
-
 function FoodCont() {
   return (
     <>

@@ -1,10 +1,11 @@
 import React from "react";
 
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import IncDecCounter from "./IncDecCounter";
 
 const notify = () => {
-  toast.success('Item has been added to cart', {
+  toast.success("Item has been added to cart", {
     position: "top-center",
     autoClose: 3000,
     hideProgressBar: false,
@@ -13,37 +14,28 @@ const notify = () => {
     draggable: true,
     progress: undefined,
     theme: "light",
-    });
-}
+  });
+};
 
-
-function FoodBox({ imgSrc, title, price }) {
-
+function FoodBox({ item }) {
   // const handleClick = async () => {
   //   alert("Item has been added to cart");
   // };
 
   return (
     <div className="details">
-      <img src={imgSrc} alt="" className="details-img" />
-      <div className="food-name">
-        <h2>{title}</h2>
-      </div>
-
+      <img src={item.img} alt="" className="details-img" />
       <div className="food-details">
         <div>
-          <p>
-            Price: {price}
-          </p>
-          <p>Available</p>
+          <p>Count: {item.count}</p>
         </div>
+      </div>
+      <div className="food-name">
+        <h2>{item.title}</h2>
       </div>
 
       <div className="cart-btn">
-        {/* <button onClick={handleClick} className="btn">
-          Add to cart
-        </button> */}
-        <button onClick={notify} className="btn">Add to cart</button>
+        <IncDecCounter />
       </div>
       <ToastContainer />
     </div>

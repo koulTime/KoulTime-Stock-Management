@@ -1,0 +1,35 @@
+.foodcontainer .left-side .cards .all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 30px;
+  color: aliceblue;
+}
+
+.categorie-name ul {
+  margin-top: 10px;
+  display: inline;
+  list-style: none;
+  color: #9d9ca1;
+}
+.categorie-name {
+  color: aliceblue;
+}
+.categorie-name h3 {
+  margin-bottom: 10px;
+  color: aliceblue;
+}
+
+.foodcontainer .left-side .cards main .details {
+  padding: 15px;
+  width: 250px;
+}
+.foodcontainer .left-side .cards main .details a {
+  text-decoration: none;
+}
+.categorie-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
