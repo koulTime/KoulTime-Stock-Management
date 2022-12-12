@@ -27,7 +27,7 @@ function FoodBox({ item }) {
       <img src={item.img} alt="" className="details-img" />
       <div className="food-details">
         <div>
-          <p>Count: {item.count}</p>
+          <p>Quantity: {item.count}</p>
         </div>
       </div>
       <div className="food-name">
