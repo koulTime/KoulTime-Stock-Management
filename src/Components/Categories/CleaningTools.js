@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FoodBox from "../FoodBox";
 import PaymentSect from "../PaymentSect";
 import TopSect from "../TopSect";
 import { categories } from "../Categories";
 import CategorieItems from "./CategorieItems";
+import ItemsService from "../../api/ItemsService";
 
 const content = [
   {
@@ -59,6 +60,48 @@ const content = [
   },
 ];
 const CleaningTools = () => {
+  const [items, setItems] = useState([
+    {
+      title: "Rejuvenate Floor Cleaner",
+      img: "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FDZGdPY8M%2FRejuvenate-Floor-Cleaner-Multi-Surface-34-oz.jpg&w=256&q=75",
+      count: "20",
+    },
+    {
+      title: "Mr Clean Cleaner",
+      img: "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FHsg3BH04%2FMr-Clean-Multi-Purpose-Cleaner-with-Febreze-Freshness-New-Zealand-Springs-Scent-40oz.jpg&w=256&q=75",
+      count: "2",
+    },
+    {
+      title: "Clean It Cleaner",
+      img: "https://kachabazar-store.vercel.app/_next/image?url=https%3A%2F%2Fi.postimg.cc%2FcJ2BYN43%2FEveryday-Living-All-Purpose-Cleaner-with-Bleach-32-oz.jpg&w=256&q=75",
+      count: "20",
+    },
+  ]);
+
+  const handleChange = () => {
+    ItemsService.getitems()
+      .then((response) => {
+        let data = response.data;
+        // data.forEach((element, index) => {
+        //   data[index].start = element.startDate;
+        //   data[index].classNames =
+        //     element.totalJetonsPaid === 4 ||
+        //     element.reservationConfirmed === true
+        //       ? 'busy'
+        //       : 'free';
+        // });
+        setItems(data);
+        console.log(data);
+        // setLoading(false);
+      })
+      .catch((e) => {
+        console.log(e);
+      });
+  };
+
+  useEffect(() => {
+    handleChange();
+  }, []);
   return (
     <>
       <CategorieItems content={content} />
